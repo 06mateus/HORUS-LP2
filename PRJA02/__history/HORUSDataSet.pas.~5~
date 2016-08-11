@@ -1,0 +1,44 @@
+unit HORUSDataSet;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls,
+  Vcl.DBCtrls, Vcl.ExtCtrls;
+
+type
+  TForm2 = class(TForm)
+    pnl1: TPanel;
+    grp1: TGroupBox;
+    grp2: TGroupBox;
+    dbnvgr1: TDBNavigator;
+    btn1: TButton;
+    dbgrd1: TDBGrid;
+    btn2: TButton;
+    btn3: TButton;
+    grp3: TGroupBox;
+    grp4: TGroupBox;
+    grp5: TGroupBox;
+    edt1: TEdit;
+    lbl1: TLabel;
+    edt2: TEdit;
+    btn4: TButton;
+    btn5: TButton;
+    btn6: TButton;
+    edt3: TEdit;
+    btn7: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+end.
