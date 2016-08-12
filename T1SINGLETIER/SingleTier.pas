@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Datasnap.DBClient, Vcl.DBCtrls,
-  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Mask;
+  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Mask, Vcl.Grids, Vcl.DBGrids;
 
 type
   TForm2 = class(TForm)
@@ -46,6 +46,14 @@ type
     lbl12: TLabel;
     lbl13: TLabel;
     lbl14: TLabel;
+    edt1: TEdit;
+    btn1: TButton;
+    cbb1: TComboBox;
+    cbb2: TComboBox;
+    dbgrd1: TDBGrid;
+    Totais: TGroupBox;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
   private
     { Private declarations }
   public

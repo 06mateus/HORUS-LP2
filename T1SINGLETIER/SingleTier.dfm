@@ -2,8 +2,8 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 470
-  ClientWidth = 780
+  ClientHeight = 485
+  ClientWidth = 778
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -84,7 +84,7 @@ object Form2: TForm2
     Caption = 'Campo'
   end
   object lbl11: TLabel
-    Left = 376
+    Left = 321
     Top = 449
     Width = 115
     Height = 13
@@ -114,11 +114,12 @@ object Form2: TForm2
   object pnl1: TPanel
     Left = 0
     Top = 0
-    Width = 780
+    Width = 778
     Height = 46
     Align = alTop
     Caption = 'pnl1'
     TabOrder = 0
+    ExplicitWidth = 780
     object dbnvgr1: TDBNavigator
       Left = 348
       Top = 4
@@ -191,10 +192,117 @@ object Form2: TForm2
     Height = 21
     TabOrder = 9
   end
+  object edt1: TEdit
+    Left = 321
+    Top = 208
+    Width = 158
+    Height = 21
+    TabOrder = 10
+  end
+  object btn1: TButton
+    Left = 492
+    Top = 206
+    Width = 276
+    Height = 25
+    Caption = 'Executar'
+    TabOrder = 11
+  end
+  object cbb1: TComboBox
+    Left = 8
+    Top = 208
+    Width = 145
+    Height = 21
+    TabOrder = 12
+    Text = 'Codigo'
+  end
+  object cbb2: TComboBox
+    Left = 166
+    Top = 208
+    Width = 145
+    Height = 21
+    TabOrder = 13
+    Text = 'Indexar'
+  end
+  object dbgrd1: TDBGrid
+    Left = 8
+    Top = 235
+    Width = 760
+    Height = 167
+    DataSource = DataSource
+    TabOrder = 14
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Codigo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Descricao'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Unidade'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Fornecedores'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Data'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Quantidade'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Unitario'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Total'
+        Visible = True
+      end>
+  end
+  object Totais: TGroupBox
+    Left = 0
+    Top = 408
+    Width = 770
+    Height = 65
+    Caption = 'Totais'
+    TabOrder = 15
+    object DBEdit1: TDBEdit
+      Left = 432
+      Top = 38
+      Width = 107
+      Height = 21
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 635
+      Top = 38
+      Width = 115
+      Height = 21
+      TabOrder = 1
+    end
+  end
   object ClientDataSet: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 528
+    Left = 472
     Top = 276
     object ClientDataSetCodigo: TIntegerField
       FieldName = 'Codigo'
@@ -236,7 +344,7 @@ object Form2: TForm2
   end
   object DataSource: TDataSource
     DataSet = ClientDataSet
-    Left = 592
-    Top = 296
+    Left = 544
+    Top = 272
   end
 end
