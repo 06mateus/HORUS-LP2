@@ -24,14 +24,14 @@ type
     pnl1: TPanel;
     dbnvgr1: TDBNavigator;
     pnl2: TPanel;
-    cxDBSpinEdit1: TDBEdit;
-    cxDBDateEdit1: TDBEdit;
-    cxDBTextEdit1: TDBEdit;
-    cxDBTextEdit3: TDBEdit;
-    cxDBTextEdit2: TDBEdit;
-    cxDBCurrencyEdit2: TDBEdit;
-    cxDBCurrencyEdit1: TDBEdit;
-    cxDBCalcEdit1: TDBEdit;
+    DBEdit1Codigo: TDBEdit;
+    DBEdit1Codigo1: TDBEdit;
+    DBEdit1Descricao: TDBEdit;
+    DBEdit1Fornecedores: TDBEdit;
+    DBEdit1Unidade: TDBEdit;
+    DBEdit1Total: TDBEdit;
+    DBEdit1Unitario: TDBEdit;
+    DBEdit1Quantidade: TDBEdit;
     lbl1: TLabel;
     lbl2: TLabel;
     lbl3: TLabel;
@@ -52,8 +52,9 @@ type
     cbb2: TComboBox;
     dbgrd1: TDBGrid;
     Totais: TGroupBox;
-    DBEdit1: TDBEdit;
-    DBEdit2: TDBEdit;
+    DBEdit1EstoqueQtd: TDBEdit;
+    DBEdit1EstoqueVlr: TDBEdit;
+    procedure ClientDataSetCalcFields(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -67,4 +68,13 @@ implementation
 
 {$R *.dfm}
 
+procedure TForm2.ClientDataSetCalcFields(DataSet: TDataSet);
+begin
+  if (not ClientDataSet.FieldByName('Preco').IsNull) and
+     (not ClientDataSet.FieldByName('Quantidade').IsNull) then
+  begin
+    ClientDataSet.FieldByName('ValorTotal').Value :=
+    ClientDataSet.FieldByName('Preco').Value * ClientDataSet.FieldByName('Quantidade').Value;
+  end;
+end;
 end.

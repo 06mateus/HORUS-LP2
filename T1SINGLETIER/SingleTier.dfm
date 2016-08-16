@@ -119,12 +119,12 @@ object Form2: TForm2
     Align = alTop
     Caption = 'pnl1'
     TabOrder = 0
-    ExplicitWidth = 780
     object dbnvgr1: TDBNavigator
       Left = 348
       Top = 4
       Width = 420
       Height = 36
+      DataSource = DataSource
       TabOrder = 0
     end
   end
@@ -136,60 +136,76 @@ object Form2: TForm2
     Caption = 'pnl2'
     TabOrder = 1
   end
-  object cxDBSpinEdit1: TDBEdit
+  object DBEdit1Codigo: TDBEdit
     Left = 8
     Top = 80
     Width = 121
     Height = 21
+    DataField = 'Codigo'
+    DataSource = DataSource
     TabOrder = 2
   end
-  object cxDBDateEdit1: TDBEdit
+  object DBEdit1Codigo1: TDBEdit
     Left = 8
     Top = 121
     Width = 121
     Height = 21
+    DataField = 'Data'
+    DataSource = DataSource
     TabOrder = 3
   end
-  object cxDBTextEdit1: TDBEdit
+  object DBEdit1Descricao: TDBEdit
     Left = 135
     Top = 80
     Width = 506
     Height = 21
+    DataField = 'Descricao'
+    DataSource = DataSource
     TabOrder = 4
   end
-  object cxDBTextEdit3: TDBEdit
+  object DBEdit1Fornecedores: TDBEdit
     Left = 135
-    Top = 121
+    Top = 123
     Width = 244
     Height = 21
+    DataField = 'Fornecedores'
+    DataSource = DataSource
     TabOrder = 5
   end
-  object cxDBTextEdit2: TDBEdit
+  object DBEdit1Unidade: TDBEdit
     Left = 647
     Top = 80
     Width = 121
     Height = 21
+    DataField = 'Unidade'
+    DataSource = DataSource
     TabOrder = 6
   end
-  object cxDBCurrencyEdit2: TDBEdit
+  object DBEdit1Total: TDBEdit
     Left = 647
     Top = 121
     Width = 121
     Height = 21
+    DataField = 'Total'
+    DataSource = DataSource
     TabOrder = 7
   end
-  object cxDBCurrencyEdit1: TDBEdit
+  object DBEdit1Unitario: TDBEdit
     Left = 512
     Top = 121
     Width = 121
     Height = 21
+    DataField = 'Unitario'
+    DataSource = DataSource
     TabOrder = 8
   end
-  object cxDBCalcEdit1: TDBEdit
+  object DBEdit1Quantidade: TDBEdit
     Left = 385
     Top = 121
     Width = 121
     Height = 21
+    DataField = 'Quantidade'
+    DataSource = DataSource
     TabOrder = 9
   end
   object edt1: TEdit
@@ -284,24 +300,29 @@ object Form2: TForm2
     Height = 65
     Caption = 'Totais'
     TabOrder = 15
-    object DBEdit1: TDBEdit
+    object DBEdit1EstoqueQtd: TDBEdit
       Left = 432
       Top = 38
       Width = 107
       Height = 21
+      DataField = 'EstoqueQtd'
+      DataSource = DataSource
       TabOrder = 0
     end
-    object DBEdit2: TDBEdit
+    object DBEdit1EstoqueVlr: TDBEdit
       Left = 635
       Top = 38
       Width = 115
       Height = 21
+      DataField = 'EstoqueVlr'
+      DataSource = DataSource
       TabOrder = 1
     end
   end
   object ClientDataSet: TClientDataSet
     Aggregates = <>
     Params = <>
+    OnCalcFields = ClientDataSetCalcFields
     Left = 472
     Top = 276
     object ClientDataSetCodigo: TIntegerField
