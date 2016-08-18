@@ -321,6 +321,7 @@ object Form2: TForm2
   end
   object ClientDataSet: TClientDataSet
     Aggregates = <>
+    AggregatesActive = True
     Params = <>
     OnCalcFields = ClientDataSetCalcFields
     Left = 472
@@ -356,11 +357,17 @@ object Form2: TForm2
     end
     object ClientDataSetEstoqueQtd: TAggregateField
       FieldName = 'EstoqueQtd'
+      Visible = True
+      Active = True
       DisplayName = ''
+      Expression = 'SUM(QtdTOTALEstoque)'
     end
     object ClientDataSetEstoqueVlr: TAggregateField
       FieldName = 'EstoqueVlr'
+      Visible = True
+      Active = True
       DisplayName = ''
+      Expression = 'SUM(VlrTOTALEstoque)'
     end
   end
   object DataSource: TDataSource
