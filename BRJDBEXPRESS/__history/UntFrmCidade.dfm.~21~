@@ -1,0 +1,131 @@
+object FrmCidade: TFrmCidade
+  Left = 0
+  Top = 0
+  Caption = 'FrmCidade'
+  ClientHeight = 446
+  ClientWidth = 768
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Codigo: TLabel
+    Left = 8
+    Top = 77
+    Width = 33
+    Height = 13
+    Caption = 'Codigo'
+  end
+  object Nome: TLabel
+    Left = 265
+    Top = 77
+    Width = 27
+    Height = 13
+    Caption = 'Nome'
+  end
+  object IBGE: TLabel
+    Left = 8
+    Top = 137
+    Width = 23
+    Height = 13
+    Caption = 'IBGE'
+  end
+  object Estado: TLabel
+    Left = 265
+    Top = 137
+    Width = 33
+    Height = 13
+    Caption = 'Estado'
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 8
+    Top = 8
+    Width = 350
+    Height = 41
+    DataSource = DsFrmCidade
+    TabOrder = 0
+  end
+  object DBEdit1: TDBEdit
+    Left = 8
+    Top = 96
+    Width = 225
+    Height = 21
+    DataField = 'CID_CODIGO'
+    DataSource = DsFrmCidade
+    TabOrder = 1
+  end
+  object DBEdit2: TDBEdit
+    Left = 8
+    Top = 156
+    Width = 225
+    Height = 21
+    DataField = 'CID_IBGE'
+    DataSource = DsFrmCidade
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit
+    Left = 265
+    Top = 96
+    Width = 361
+    Height = 21
+    DataField = 'CID_NOME'
+    DataSource = DsFrmCidade
+    TabOrder = 3
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 200
+    Width = 673
+    Height = 209
+    DataSource = DsFrmCidade
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CID_CODIGO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CID_NOME'
+        Width = 180
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CID_IBGE'
+        Width = 103
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CID_EST_CODIGO'
+        Visible = True
+      end>
+  end
+  object DBEdit4: TDBEdit
+    Left = 265
+    Top = 156
+    Width = 361
+    Height = 21
+    DataField = 'CID_EST_CODIGO'
+    DataSource = DsFrmCidade
+    TabOrder = 5
+  end
+  object DsFrmCidade: TDataSource
+    DataSet = DmCadastroLocalizacao.CdsCidade
+    Left = 392
+    Top = 24
+  end
+end

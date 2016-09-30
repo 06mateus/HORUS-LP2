@@ -1,0 +1,23 @@
+program DataModuleFrmPRINCIPAL;
+
+uses
+  Vcl.Forms,
+  UntFrmPrincipal in 'UntFrmPrincipal.pas' {FrmPrincipal},
+  UntDmDataBasePrincipal in 'UntDmDataBasePrincipal.pas' {DmDataBasePrincipal: TDataModule},
+  UntDmCadastroLocalizacao in 'UntDmCadastroLocalizacao.pas' {DmCadastroLocalizacao: TDataModule},
+  UntFrmPais in 'UntFrmPais.pas' {FrmPais},
+  UntFrmEstado in 'UntFrmEstado.pas' {FrmEstado},
+  UntFrmCidade in 'UntFrmCidade.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TDmDataBasePrincipal, DmDataBasePrincipal);
+  Application.CreateForm(TDmCadastroLocalizacao, DmCadastroLocalizacao);
+  Application.CreateForm(TFrmEstado, FrmEstado);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

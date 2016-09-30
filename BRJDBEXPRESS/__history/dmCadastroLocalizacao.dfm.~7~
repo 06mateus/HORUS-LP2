@@ -1,0 +1,49 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 527
+  Width = 796
+  object SdsPais: TSQLDataSet
+    CommandText = 'SELECT PAI_CODIGO, PAI_NOME, PAI_SIGLA,'#13#10'PAI_BACEN FROM PAIS'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = DataModule1.Conexao
+    Left = 360
+    Top = 248
+    object SdsPaisPAI_CODIGO: TLargeintField
+      FieldName = 'PAI_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object SdsPaisPAI_NOME: TStringField
+      FieldName = 'PAI_NOME'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+      Size = 60
+    end
+    object SdsPaisPAI_SIGLA: TStringField
+      FieldName = 'PAI_SIGLA'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+      Size = 3
+    end
+    object SdsPaisPAI_BACEN: TIntegerField
+      FieldName = 'PAI_BACEN'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+    end
+  end
+  object DspPais: TDataSetProvider
+    DataSet = SdsPais
+    Options = [poAllowCommandText, poUseQuoteChar]
+    UpdateMode = upWhereKeyOnly
+    Left = 456
+    Top = 248
+  end
+  object CdsPais: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspPais'
+    Left = 448
+    Top = 344
+  end
+end

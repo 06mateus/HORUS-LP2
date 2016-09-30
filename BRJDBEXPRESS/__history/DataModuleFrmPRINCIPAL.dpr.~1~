@@ -1,0 +1,18 @@
+program FrmPRINCIPAL;
+
+uses
+  Vcl.Forms,
+  UntDBEXPRESS in 'UntDBEXPRESS.pas' {Form2},
+  dmDataBasePRINCIPAL in 'dmDataBasePRINCIPAL.pas' {DataModule1: TDataModule},
+  dmCadastroLocalizacao in 'dmCadastroLocalizacao.pas' {DataModule2: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TDataModule2, DataModule2);
+  Application.Run;
+end.

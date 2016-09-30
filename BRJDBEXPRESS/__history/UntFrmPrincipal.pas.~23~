@@ -1,0 +1,61 @@
+unit UntFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus,UntFrmPais,UntFrmEstado,UntFrmCidade;
+
+type
+  TFrmPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastros1: TMenuItem;
+    Localizao1: TMenuItem;
+    Pas1: TMenuItem;
+    Estado1: TMenuItem;
+    Cidade1: TMenuItem;
+    procedure Pas1Click(Sender: TObject);
+    procedure Cidade1Click(Sender: TObject);
+
+  private
+    { Private declarations }
+
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+
+
+procedure TFrmPrincipal.Pas1Click(Sender: TObject);
+var
+vFrmPais: TFrmPais;
+begin
+  vFrmPais:= TFrmPais.Create(nil);
+  try
+    vFrmPais.ShowModal;
+  finally
+    FreeAndNil(vFrmPais);
+  end;
+end;
+
+
+procedure TFrmPrincipal.Cidade1Click(Sender: TObject);
+var
+vFrmCidade: TFrmCidade;
+begin
+  vFrmCidade:= TFrmCidade.Create(nil);
+  try
+    vFrmCidade.ShowModal;
+  finally
+    FreeAndNil(vFrmCidade);
+  end;
+end;
+
+end.

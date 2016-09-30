@@ -1,0 +1,33 @@
+unit dmCadastroLocalizacao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes,dmDataBasePRINCIPAL, Data.FMTBcd,
+  Datasnap.DBClient, Datasnap.Provider, Data.DB, Data.SqlExpr;
+
+type
+  TDataModule2 = class(TDataModule)
+    SdsPais: TSQLDataSet;
+    DspPais: TDataSetProvider;
+    CdsPais: TClientDataSet;
+    SdsPaisPAI_CODIGO: TLargeintField;
+    SdsPaisPAI_NOME: TStringField;
+    SdsPaisPAI_SIGLA: TStringField;
+    SdsPaisPAI_BACEN: TIntegerField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule2: TDataModule2;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.
