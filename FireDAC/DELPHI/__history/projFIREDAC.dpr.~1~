@@ -1,0 +1,16 @@
+program projFIREDAC;
+
+uses
+  Vcl.Forms,
+  unFIREDAC in 'unFIREDAC.pas' {Form2},
+  frmPRINCIPAL in 'frmPRINCIPAL.pas' {DataModule3: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TDataModule3, DataModule3);
+  Application.Run;
+end.

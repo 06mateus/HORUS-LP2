@@ -1,0 +1,17 @@
+object DataModule3: TDataModule3
+  OldCreateOrder = False
+  Height = 482
+  Width = 758
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=D:\Mateus\FACULDADE\2016 4'#186' Semestre\4'#170' LINGUAGEM DE PR' +
+        'OGRAMA'#199#195'O II Delphi\HORUS-LP2\FireDAC\BANCOFIREDAC.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    LoginPrompt = False
+    Left = 360
+    Top = 224
+  end
+end

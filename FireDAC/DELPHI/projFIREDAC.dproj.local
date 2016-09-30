@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/03/03 19:53:10.000.602,=C:\Users\DELL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016/03/03 19:53:15.000.926,=C:\Users\DELL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016/03/10 21:23:34.000.147,=C:\Users\DELL\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016/06/09 19:13:34.000.110,=C:\Users\MATEUS\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016/09/28 20:30:31.000.666,=C:\Users\MATEUS\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016/09/28 20:35:02.000.144,=C:\Users\MATEUS\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2016/09/28 20:35:50.000.699,D:\Mateus\FACULDADE\2016 4º Semestre\4ª LINGUAGEM DE PROGRAMAÇÃO II Delphi\HORUS-LP2\FireDAC\DELPHI\frmPRINCIPAL.pas=C:\Users\MATEUS\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2016/09/28 20:35:50.000.699,D:\Mateus\FACULDADE\2016 4º Semestre\4ª LINGUAGEM DE PROGRAMAÇÃO II Delphi\HORUS-LP2\FireDAC\DELPHI\frmPRINCIPAL.dfm=C:\Users\MATEUS\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2016/09/28 20:36:27.000.045,D:\Mateus\FACULDADE\2016 4º Semestre\4ª LINGUAGEM DE PROGRAMAÇÃO II Delphi\HORUS-LP2\FireDAC\DELPHI\unFIREDAC.pas=C:\Users\MATEUS\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016/09/28 20:36:27.000.045,D:\Mateus\FACULDADE\2016 4º Semestre\4ª LINGUAGEM DE PROGRAMAÇÃO II Delphi\HORUS-LP2\FireDAC\DELPHI\unFIREDAC.dfm=C:\Users\MATEUS\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2016/09/28 20:36:50.000.297,D:\Mateus\FACULDADE\2016 4º Semestre\4ª LINGUAGEM DE PROGRAMAÇÃO II Delphi\HORUS-LP2\FireDAC\DELPHI\projFIREDAC.dproj=C:\Users\MATEUS\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2016/09/28 22:12:06.187,=D:\Mateus\FACULDADE\2016 4º Semestre\4ª LINGUAGEM DE PROGRAMAÇÃO II Delphi\HORUS-LP2\FireDAC\DELPHI\Unit1.pas</Transaction>
+    <Transaction>2016/09/28 22:15:02.467,D:\Mateus\FACULDADE\2016 4º Semestre\4ª LINGUAGEM DE PROGRAMAÇÃO II Delphi\HORUS-LP2\FireDAC\DELPHI\Frm.Proprietarios.pas=D:\Mateus\FACULDADE\2016 4º Semestre\4ª LINGUAGEM DE PROGRAMAÇÃO II Delphi\HORUS-LP2\FireDAC\DELPHI\Unit1.pas</Transaction>
+    <Transaction>2016/09/28 22:15:02.467,D:\Mateus\FACULDADE\2016 4º Semestre\4ª LINGUAGEM DE PROGRAMAÇÃO II Delphi\HORUS-LP2\FireDAC\DELPHI\Frm.Proprietarios.dfm=D:\Mateus\FACULDADE\2016 4º Semestre\4ª LINGUAGEM DE PROGRAMAÇÃO II Delphi\HORUS-LP2\FireDAC\DELPHI\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
