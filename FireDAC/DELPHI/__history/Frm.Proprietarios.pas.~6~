@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls,
-  Data.DB, Vcl.Mask, Vcl.Grids, Vcl.DBGrids;
+  Data.DB, Vcl.Mask;
 
 type
   TfrmPROPRIETARIOS = class(TForm)
@@ -17,7 +17,6 @@ type
     DBEdit2: TDBEdit;
     DBEdit3: TDBEdit;
     DsProprietario: TDataSource;
-    DBGrid1: TDBGrid;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
@@ -33,7 +32,7 @@ implementation
 
 {$R *.dfm}
 
-uses frmPRINCIPAL, unFIREDAC;
+uses frmPRINCIPAL;
 
 procedure TfrmPROPRIETARIOS.FormClose(Sender: TObject;
   var Action: TCloseAction);

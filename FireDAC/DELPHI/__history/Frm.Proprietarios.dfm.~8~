@@ -41,7 +41,6 @@ object frmPROPRIETARIOS: TfrmPROPRIETARIOS
     Top = 0
     Width = 690
     Height = 41
-    DataSource = DsProprietario
     TabOrder = 0
   end
   object DBEdit1: TDBEdit
@@ -49,7 +48,6 @@ object frmPROPRIETARIOS: TfrmPROPRIETARIOS
     Top = 80
     Width = 121
     Height = 21
-    DataSource = DsProprietario
     TabOrder = 1
   end
   object DBEdit2: TDBEdit
@@ -57,15 +55,13 @@ object frmPROPRIETARIOS: TfrmPROPRIETARIOS
     Top = 139
     Width = 697
     Height = 21
-    DataSource = DsProprietario
     TabOrder = 2
   end
   object DBEdit3: TDBEdit
-    Left = 16
+    Left = 8
     Top = 203
-    Width = 697
+    Width = 705
     Height = 21
-    DataSource = DsProprietario
     TabOrder = 3
   end
   object DBGrid1: TDBGrid
@@ -73,7 +69,6 @@ object frmPROPRIETARIOS: TfrmPROPRIETARIOS
     Top = 264
     Width = 725
     Height = 129
-    DataSource = DsProprietario
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
