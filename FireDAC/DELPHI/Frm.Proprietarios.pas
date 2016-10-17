@@ -13,13 +13,13 @@ type
     Codigo: TLabel;
     Nome: TLabel;
     Label3: TLabel;
-    DBEdit1: TDBEdit;
-    DBEdit2: TDBEdit;
-    DBEdit3: TDBEdit;
+    DBEdt_Codigo: TDBEdit;
+    DBEdt_Nome: TDBEdit;
+    DBEdt_Endereco: TDBEdit;
     DsProprietario: TDataSource;
-    DBGrid1: TDBGrid;
+    DBGrid_Lista: TDBGrid;
     procedure FormCreate(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,17 +33,16 @@ implementation
 
 {$R *.dfm}
 
-uses frmPRINCIPAL, unFIREDAC;
-
-procedure TfrmPROPRIETARIOS.FormClose(Sender: TObject;
-  var Action: TCloseAction);
-begin
-   DM.QqyProprietario.close;
-end;
+uses DataModule_Conexao;
 
 procedure TfrmPROPRIETARIOS.FormCreate(Sender: TObject);
 begin
-   DM.QqyProprietario.open;
+   DM.QueryProprietario.Open;
+end;
+
+procedure TfrmPROPRIETARIOS.FormDestroy(Sender: TObject);
+begin
+   DM.QueryProprietario.close;
 end;
 
 end.

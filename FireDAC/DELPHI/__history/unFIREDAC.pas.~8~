@@ -1,0 +1,54 @@
+unit unFIREDAC;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    btn_Proprietarios: TButton;
+    btn_VeiculosMultas: TButton;
+    procedure btn_ProprietariosClick(Sender: TObject);
+    procedure btn_VeiculosMultasClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+uses Frm.Proprietarios, Frm.VeiculosMultas, DataModule_Conexao;
+
+procedure TForm2.btn_ProprietariosClick(Sender: TObject);
+var
+  vFrmProprietarios: TFrmProprietarios;
+begin
+   vFrmProprietarios := TFrmProprietarios.Create(nil);
+   try
+     vFrmProprietarios.ShowModal;
+   finally
+     FreeAndNil(vFrmProprietarios);
+   end;
+end;
+
+procedure TForm2.btn_VeiculosMultasClick(Sender: TObject);
+var
+  vFrmVeiculosMultas: Frm.VeiculosMultas;
+begin
+   vFrmVeiculosMultas := Frm.VeiculosMultas.Create(nil);
+   try
+     vFrmVeiculosMultas.ShowModal;
+   finally
+     FreeAndNil(vFrmVeiculosMultas);
+   end;
+end;
+
+end.

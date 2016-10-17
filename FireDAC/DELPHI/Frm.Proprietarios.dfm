@@ -1,6 +1,7 @@
 object frmPROPRIETARIOS: TfrmPROPRIETARIOS
   Left = 0
   Top = 0
+  Align = alClient
   Caption = 'PROPRIET'#193'RIOS'
   ClientHeight = 461
   ClientWidth = 741
@@ -11,8 +12,8 @@ object frmPROPRIETARIOS: TfrmPROPRIETARIOS
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  OnClose = FormClose
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object Codigo: TLabel
@@ -24,14 +25,14 @@ object frmPROPRIETARIOS: TfrmPROPRIETARIOS
   end
   object Nome: TLabel
     Left = 16
-    Top = 120
+    Top = 112
     Width = 27
     Height = 13
     Caption = 'Nome'
   end
   object Label3: TLabel
     Left = 16
-    Top = 184
+    Top = 163
     Width = 45
     Height = 13
     Caption = 'Endere'#231'o'
@@ -44,35 +45,38 @@ object frmPROPRIETARIOS: TfrmPROPRIETARIOS
     DataSource = DsProprietario
     TabOrder = 0
   end
-  object DBEdit1: TDBEdit
+  object DBEdt_Codigo: TDBEdit
     Left = 16
     Top = 80
     Width = 121
     Height = 21
+    DataField = 'PRP_CODIGO'
     DataSource = DsProprietario
     TabOrder = 1
   end
-  object DBEdit2: TDBEdit
+  object DBEdt_Nome: TDBEdit
     Left = 16
-    Top = 139
+    Top = 131
     Width = 697
     Height = 21
+    DataField = 'PRP_NOME'
     DataSource = DsProprietario
     TabOrder = 2
   end
-  object DBEdit3: TDBEdit
+  object DBEdt_Endereco: TDBEdit
     Left = 16
-    Top = 203
+    Top = 182
     Width = 697
     Height = 21
+    DataField = 'PRP_ENDERECO'
     DataSource = DsProprietario
     TabOrder = 3
   end
-  object DBGrid1: TDBGrid
+  object DBGrid_Lista: TDBGrid
     Left = 8
-    Top = 264
+    Top = 224
     Width = 725
-    Height = 129
+    Height = 229
     DataSource = DsProprietario
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
@@ -80,9 +84,28 @@ object frmPROPRIETARIOS: TfrmPROPRIETARIOS
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'PRP_CODIGO'
+        Width = 117
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PRP_NOME'
+        Width = 212
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PRP_ENDERECO'
+        Visible = True
+      end>
   end
   object DsProprietario: TDataSource
-    Left = 584
+    DataSet = DM.QueryProprietario
+    Left = 648
     Top = 72
   end
 end

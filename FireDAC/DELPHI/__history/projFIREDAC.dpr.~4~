@@ -1,0 +1,20 @@
+program projFIREDAC;
+
+uses
+  Vcl.Forms,
+  unFIREDAC in 'unFIREDAC.pas' {Form2},
+  DataModule_Conexao in 'DataModule_Conexao.pas' {DM: TDataModule},
+  Frm.Proprietarios in 'Frm.Proprietarios.pas' {frmPROPRIETARIOS},
+  DataModule_Query in 'DataModule_Query.pas' {DataModule_Querys: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TfrmPROPRIETARIOS, frmPROPRIETARIOS);
+  Application.CreateForm(TDataModule_Querys, DataModule_Querys);
+  Application.Run;
+end.

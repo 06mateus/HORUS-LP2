@@ -1,0 +1,74 @@
+unit Frm.VeiculosMultas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, Data.DB;
+
+type
+  TFrmVeiculosMultas = class(TForm)
+    DBNavigator1: TDBNavigator;
+    TDBedt_Codigo: TDBEdit;
+    TDBedt_Placa: TDBEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    TDBedt_Marca: TDBEdit;
+    Label5: TLabel;
+    TDBedt_Modelo: TDBEdit;
+    Label6: TLabel;
+    DBEdit1: TDBEdit;
+    Label7: TLabel;
+    DbGrid_Veiculos: TDBGrid;
+    DBNavigator2: TDBNavigator;
+    TDBedt_Item: TDBEdit;
+    TDBedt_Data: TDBEdit;
+    TDBedt_Hora: TDBEdit;
+    TDBedt_Valor: TDBEdit;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    TDBedt_Local: TDBEdit;
+    TDBedt_Proprietario: TDBEdit;
+    DbGrid_Multas: TDBGrid;
+    DsVeiculo: TDataSource;
+    DsMultas: TDataSource;
+    DsProprietario: TDataSource;
+    DBLookupComboBox1: TDBLookupComboBox;
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmVeiculosMultas: TFrmVeiculosMultas;
+
+implementation
+
+{$R *.dfm}
+
+uses DataModule_Conexao;
+
+procedure TFrmVeiculosMultas.FormCreate(Sender: TObject);
+begin
+   DM.QueryVeiculo.Open;
+   DM.QueryMultas.Open;
+   DM.QueryProprietario.Open;
+end;
+
+procedure TFrmVeiculosMultas.FormDestroy(Sender: TObject);
+begin
+   DM.QueryVeiculo.Close;
+   DM.QueryMultas.Close;
+   DM.QueryProprietario.Close;
+end;
+
+end.
